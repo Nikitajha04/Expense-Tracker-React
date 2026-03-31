@@ -1,0 +1,132 @@
+/* Reset - makes everything clean */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Main container */
+.app {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+/* Header - colorful top */
+.header {
+  background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.header div {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Form - simple inputs */
+.form {
+  padding: 25px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  min-width: 150px;
+}
+
+.form input:focus {
+  border-color: #667eea;
+  outline: none;
+}
+
+.form button {
+  padding: 12px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #5a67d8;
+}
+
+/* Expenses list */
+.list {
+  padding: 25px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.expense {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.expense strong {
+  color: #333;
+  font-size: 16px;
+}
+
+.expense small {
+  color: #666;
+  margin-left: 10px;
+}
+
+.expense button {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.expense button:hover {
+  background: #ff5252;
+}
+
+.list p {
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+  padding: 40px;
+}
+
+/* Mobile friendly */
+@media (max-width: 600px) {
+  .form {
+    flex-direction: column;
+  }
+}
